@@ -1,0 +1,30 @@
+{
+  "name": "create-jukebox",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "Element showing syncronized data from Firebase",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "firebase"
+  ],
+  "main": "create-jukebox.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/<USERNAME>/create-jukebox/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "firebase-element": "GoogleWebComponents/firebase-element#~1.0.7",
+    "paper-icon-button": "PolymerElements/paper-icon-button#~1.0.5",
+    "paper-input": "PolymerElements/paper-input#~1.0.18",
+    "paper-spinner": "PolymerElements/paper-spinner#~1.0.2",
+    "polymer": "Polymer/polymer#^1.2.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  }
+}
