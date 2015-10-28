@@ -11,19 +11,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-input/paper-input.html">
 <link rel="import" href="../paper-button/paper-button.html">
-<link rel="import" href="../paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../iron-icons/av-icons.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../firebase-element/firebase-collection.html">
 
 <!--
-An element displaying syncronized data from Firebase
+Create new jukebox in Firebase
 
 Example:
 
     <create-jukebox></create-jukebox>
 
-@group Now playing
+@group Create jukebox
 @element create-jukebox
 @demo demo/index.html
 -->
@@ -35,6 +33,7 @@ Example:
         --paper-input-container: {
           padding: 10px;
           background: #fff;
+          border-radius: 3px;
         }
         --paper-input-container-underline: {
           background: #fff;
@@ -45,27 +44,9 @@ Example:
         --paper-input-container-input: {
           padding-left: 10px;
         }
-        --paper-button: {
-          background-color: var(--paper-green-500);
-          color: #fff;
-        }
       }
       paper-input {
         display: inline-block;
-      }
-      paper-spinner {
-        width: 24px;
-        height: 24px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 8px;
-        vertical-align: middle;
-      }
-      paper-spinner {
-        --paper-spinner-layer-1-color: #000;
-        --paper-spinner-layer-2-color: #000;
-        --paper-spinner-layer-3-color: #000;
-        --paper-spinner-layer-4-color: #000;
       }
     </style>
     <firebase-collection  id="firebaseCollection"
