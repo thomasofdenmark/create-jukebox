@@ -22,5 +22,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <create-jukebox></create-jukebox>
 
+    <script>
+      document.addEventListener('jukebox-created', function(e) {
+        console.log('jukebox-created: ', e.detail);
+      });
+    </script>
   </body>
 </html>
