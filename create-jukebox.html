@@ -31,15 +31,15 @@ Example:
     <style>
       :host {
         --paper-input-container: {
-          padding: 10px;
-          background: #fff;
+          padding: 8px;
+          background: rgba(255,255,255,0.65);
           border-radius: 3px;
         }
         --paper-input-container-underline: {
-          background: #fff;
+          background: transparent;
         }
         --paper-input-container-underline-focus: {
-          background: #fff;
+          background: transparent;
         }
         --paper-input-container-input: {
           padding-left: 10px;
@@ -54,7 +54,7 @@ Example:
     </firebase-collection>
     
     <paper-input id="jukebox-name" no-label-float placeholder="Name" value="{{jukeboxName}}"></paper-input>
-    <paper-button on-tap="_handleCreateJukebox" raised>Create new jukebox</paper-button>
+    <paper-button on-tap="_handleCreateJukebox" raised>Create a jukebox</paper-button>
 
   </template>
 
