@@ -9,9 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../paper-input/paper-input.html">
 <link rel="import" href="../paper-button/paper-button.html">
-<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../firebase-element/firebase-collection.html">
 
 <!--
@@ -29,31 +27,22 @@ Example:
 <dom-module id="create-jukebox">
   <template>
     <style>
-      :host {
-        --paper-input-container: {
-          padding: 8px;
-          background: rgba(255,255,255,0.65);
-          border-radius: 3px;
-        }
-        --paper-input-container-underline: {
-          background: transparent;
-        }
-        --paper-input-container-underline-focus: {
-          background: transparent;
-        }
-        --paper-input-container-input: {
-          padding-left: 10px;
-        }
-      }
-      paper-input {
+      input {
         display: inline-block;
+        padding: 8px;
+        padding-left: 10px;
+        background: rgba(255,255,255,0.65);
+        border-radius: 3px;
+        outline: none;
+        border: 0;
+        height: 25px;
       }
     </style>
     <firebase-collection  id="firebaseCollection"
                           location="{{_firebaseLocation}}">
     </firebase-collection>
     
-    <paper-input id="jukebox-name" no-label-float placeholder="Name" value="{{jukeboxName}}"></paper-input>
+    <input id="jukebox-name" type="text" value="{{jukeboxName::input}}" />
     <paper-button on-tap="_handleCreateJukebox" raised>Create a jukebox</paper-button>
 
   </template>
@@ -61,7 +50,6 @@ Example:
   <script>
     Polymer({
       is: 'create-jukebox',
-
       properties: {
         _firebaseLocation: {
           type: String,
