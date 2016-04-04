@@ -39,7 +39,7 @@ Example:
       }
     </style>
     <firebase-collection  id="firebaseCollection"
-                          location="{{_firebaseLocation}}">
+                          location="{{firebaselocation}}">
     </firebase-collection>
     
     <input id="jukebox-name" type="text" value="{{jukeboxName::input}}" />
@@ -51,10 +51,7 @@ Example:
     Polymer({
       is: 'create-jukebox',
       properties: {
-        _firebaseLocation: {
-          type: String,
-          value: 'https://deejay.firebaseio.com/jukeboxes/'
-        }
+        firebaselocation: String
       },
       _addJukebox: function(params) {
         return this.$.firebaseCollection.add(params).key();
